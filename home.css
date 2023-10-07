@@ -1,8 +1,11 @@
 body {
     background-color:#fef9e7;
-    
-}
+    margin: 0;
+    }
 
+.center{
+        text-align: center;
+    }
 
 @keyframes fadeIn {
     0% {
@@ -22,12 +25,11 @@ h1{font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 10px;
     font-size: 60pt;
     text-align: center;
-    line-height: 1.2;} 
+    line-height: 1.2; 
+    margin-top: -10px;
+}
     
 
-
-
-/* Style the header containing the logo and navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -41,7 +43,6 @@ header a {
 }
 
 /* Style the navigation menu (nav) */
-/* Style the navigation */
 nav {
     text-align: center;
     color: #f3d4e0;
@@ -110,7 +111,10 @@ nav ul li a:hover {
     color: #254209; /* Change the color on hover */
 }
 
-/* Your existing navbar styles */
+
+/* bottom nav bar*/
+
+
 .navbar {
     display: flex;
     justify-content: space-between; /* Adjusted for better spacing */
@@ -120,33 +124,7 @@ nav ul li a:hover {
 }
 
 /* Style the individual navigation links */
-.navbar a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-    margin-right: 10px; /* Added margin for spacing between links */
-    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
-}
 
-
-/* Your existing navbar styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #254209;
-    padding: 10px 0; /* Removed horizontal padding and added padding-bottom */
-    align-items: center;
-    position: fixed; /* Make the navbar fixed */
-    bottom: 0; /* Place the navbar at the bottom of the screen */
-    left: 0; /* Align it with the left edge */
-    right: 0; /* Align it with the right edge */
-    width: 100%; /* Make it spread across the whole bottom */
-    z-index: 1; /* Adjust z-index to layer it properly */
-}
-
-
-/* Style the individual navigation links */
 .navbar a {
     display: inline-block;
     width: 60px;
@@ -161,10 +139,3 @@ nav ul li a:hover {
     transform: scale(1.1); /* Increase size on hover */
 }
 
-/* Additional styles for contact information */
-.contact-info {
-    text-align: right; /* Align to the right side of the navbar */
-    color: #fef9e7;
-    font-size: 16px;
-    margin-right: 10px; /* Added margin for spacing */
-}
