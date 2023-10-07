@@ -119,18 +119,7 @@ nav ul li a:hover {
 }
 
 
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color:  #254209;/* Background color for the navigation bar */
-    padding: 10px 0; /* Add some padding for spacing */
-}
 
-
-body {
-    margin: 0;
-    background-color: #fef9e7;
-}
 
 
 
@@ -285,13 +274,6 @@ nav ul li a:hover {
     transform: scale(1.1); /* Increase size on hover */
 }
 
-/* Additional styles for contact information */
-.contact-info {
-    text-align: right; /* Align to the right side of the navbar */
-    color: #fef9e7;
-    font-size: 16px;
-    margin-right: 10px; /* Added margin for spacing */
-}
 
 
 
