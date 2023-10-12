@@ -1,0 +1,189 @@
+/* Resetting some default styles */
+body {
+    margin: 0;
+    background-color: #fef9e7;
+
+}
+
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.center{
+        text-align: center;
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out; /* Adjust the animation duration as needed */
+}
+
+h1{ font-family: 'Bebas Neue', sans-serif;
+    color: #f3d4e0;
+    margin-bottom: 10px;
+    font-size: 60pt;
+    text-align: center;
+    line-height: 1; 
+    margin-top: -8px;
+}
+    
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #f3d4e0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Style the logo (a) */
+header a {
+    text-decoration: none;
+}
+
+/* Style the navigation menu (nav) */
+nav {
+    text-align: center;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20pt;
+}
+
+/* Style the list (ul) inside the navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display the list horizontally */
+}
+
+/* Style the list items (li) in the navigation */
+nav ul li {
+    margin-right: 50px; /* Add spacing between items */
+}
+
+/* Style the links (a) in the navigation */
+nav ul li a {
+    text-decoration: none;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style links on hover */
+nav ul li a:hover {
+    color: #254209; /* Change the color on hover */
+}
+
+nav {
+    text-align: center;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20pt;
+}
+
+/* Style the list (ul) inside the navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display the list horizontally */
+}
+
+/* Style the list items (li) in the navigation */
+nav ul li {
+    margin-right: 50px; /* Add spacing between items */
+}
+
+/* Style the links (a) in the navigation */
+nav ul li a {
+    text-decoration: none;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style links on hover */
+nav ul li a:hover {
+    color: #254209; /* Change the color on hover */
+}
+
+
+.me{
+    padding: 4pt;
+    border: #254209;
+    border: 5pt solid #254209;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;  /* Adjusted for better spacing */
+    background-color: #254209;
+    padding: 10px 20px; /* Increased horizontal padding for spacing */
+    align-items: center; /* Vertically center the content */
+ }
+
+ 
+ .navbar a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 10px; /* Added margin for spacing between links */
+    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+ }
+ 
+ 
+ /* On hover, scale the navigation links slightly */
+ .navbar a:hover {
+    transform: scale(1.1); /* Increase size on hover */
+ }
+ 
+ #datetime{
+    text-align: center;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30pt;
+    padding-bottom: 4;
+    line-height: 1.2;
+    margin:5px 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-intwo {
+    animation: fadeIn 1.5s ease-in-out; /* Adjust the animation duration as needed */
+}
+    
+    
+
+ 
