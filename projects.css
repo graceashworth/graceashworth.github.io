@@ -1,0 +1,318 @@
+body {
+    background-color:#fef9e7;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out; /* Adjust the animation duration as needed */
+}
+
+
+
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #f3d4e0;
+    margin-bottom: 10px;
+}
+
+
+/* Style for the main heading */
+h1 {
+    font-size: 60pt;
+    text-align: center;
+    line-height: 1.2;
+    margin:5px 
+}
+
+/* Style for the secondary headings */
+h2 {
+    font-size: 50pt;
+    text-align: center;
+    line-height: 1.2;
+    margin:5px 
+}
+
+/* Style for the smaller headings (h3) */
+h3 {
+    font-size: 30pt;
+    text-align: left;
+    line-height: 1.2;
+}
+
+/* Common styles for paragraphs */
+p {
+    font-family: 'Outfit', sans-serif;
+    color:  #254209;
+    font-size: 16pt;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0;
+}
+
+
+h4 {
+    font-size: 30pt;
+    text-align: left;
+    line-height: 1.2;
+}
+
+p {
+    font-family: 'Outfit', sans-serif;
+    color:  #254209;
+    font-size: 16pt;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* Style the navigation menu (nav) */
+/* Style the navigation */
+nav {
+    text-align: center;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style the list (ul) inside the navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display the list horizontally */
+}
+
+/* Style the list items (li) in the navigation */
+nav ul li {
+    margin-right: 50px; /* Add spacing between items */
+}
+
+/* Style the links (a) in the navigation */
+nav ul li a {
+    text-decoration: none;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style links on hover */
+nav ul li a:hover {
+    color: #254209; /* Change the color on hover */
+}
+
+
+
+
+
+
+
+
+/* Resetting some default styles */
+body {
+    margin: 0;
+    background-color: #fef9e7;
+
+}
+
+/* Style the main container */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Style the introduction section */
+.intro {
+    display: flex;
+    align-items: center;
+}
+
+/* Style headings and paragraphs */
+h1, h2, h3, h4 {
+    color:  #f3d4e0;
+}
+  /* Define a keyframes animation called "fadeIn" */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 (completely transparent) */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 (fully visible) */
+    }
+}
+
+/* Apply the "fadeIn" animation to elements with the class "fade-in" */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out; /* Adjust the animation duration and timing function as needed */
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 50px;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style specific sections */
+.about, .outside-school {
+    border-top: 1px solid #254209;
+    padding-top: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Adjust the value as needed */
+}
+
+.image-row img:nth-child(2) {
+    margin-left: -300px; /* Adjust the value as needed */
+}
+
+
+/* Style the header containing the logo and navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Style the logo (a) */
+header a {
+    text-decoration: none;
+}
+
+/* Style the navigation menu (nav) */
+
+nav {
+    text-align: center;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20pt;
+}
+
+/* Style the list (ul) inside the navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display the list horizontally */
+}
+
+/* Style the list items (li) in the navigation */
+nav ul li {
+    margin-right: 50px; /* Add spacing between items */
+}
+
+/* Style the links (a) in the navigation */
+nav ul li a {
+    text-decoration: none;
+    color: #f3d4e0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style links on hover */
+nav ul li a:hover {
+    color: #254209; /* Change the color on hover */
+}
+
+
+
+
+
+.navbar {
+    display: flex-end;
+    justify-content: flex-start; /* Adjusted for better spacing */
+    background-color: #254209;
+    padding: 10px 20px; /* Increased horizontal padding for spacing */
+    align-items: center; /* Vertically center the content */
+ }
+ 
+ 
+ 
+ 
+ /* Style the individual navigation links */
+ 
+ 
+ .navbar a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 10px; /* Added margin for spacing between links */
+    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+ }
+ 
+ 
+ /* On hover, scale the navigation links slightly */
+ .navbar a:hover {
+    transform: scale(1.1); /* Increase size on hover */}
+ 
+
+
+    
+.image-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+.image-container a {
+        text-decoration: none;
+    }
+
+.image-container img {
+    width: 220px; /* Set a fixed width for the images */
+    height: 220px; /* Set a fixed height for the images */
+    border-radius: 5%; /* Make the images round */
+    transition: transform 0.3s;
+    }
+
+.image-container img:hover {
+        transform: scale(1.1); /* Zoom in on hover */
+    } 
