@@ -39,13 +39,6 @@ h1{ font-family: 'Bebas Neue', sans-serif;
     margin-top: -8px;
 }
     
-h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #f3d4e0;
-    text-align: center;
-}
 
 header {
     display: flex;
