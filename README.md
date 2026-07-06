@@ -2,4 +2,5 @@
 
 
 
-Personal Website coded and designed in HTML, CSS, and JavaScript by Grace Ashworth
+Personal Website coded and designed in HTML, CSS, and JavaScript by Grace Ashworth 
+
