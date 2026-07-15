@@ -1,0 +1,418 @@
+/* ═══════════════════════════════════════════════════════════════
+   GRACE ASHWORTH · style.css
+   To change the whole site's colors, edit the variables below.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --paper: #FAF5EF;   /* page background (warm cream) */
+  --ink: #3E2B26;     /* all text (dark cocoa) */
+  --pink: #ecc5c6;    /* accents: postmark, links, stamps */
+  --faded: #9c8578;   /* muted meta text (dates, labels) */
+  --line: #d9bfae;    /* dotted divider lines */
+  --card: #ffffff;    /* postcards, clippings, note cards */
+  --card-edge: #e5d9cc;
+  --display-font: 'Cormorant Garamond', Georgia, serif;  /* big headings */
+}
+
+/* ── Base ─────────────────────────────────────────────────────── */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Source Serif Pro', 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 36px 28px 64px;
+}
+
+a { color: var(--ink); text-decoration: none; border-bottom: 1.5px solid var(--pink); transition: border-color 0.2s; }
+a:hover { border-color: var(--ink); }
+a:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; }
+
+em, .hand { font-style: italic; }
+
+/* ── Navigation ───────────────────────────────────────────────── */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.nav-home {
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 19px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.nav-home:hover .envelope-icon { transform: translateY(-2px); }
+.envelope-icon { transition: transform 0.2s; }
+
+.nav-links { display: flex; gap: 26px; }
+.nav-links a {
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  border-bottom: none;
+  color: var(--faded);
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.current {
+  color: var(--ink);
+  border-bottom: 2px solid var(--pink);
+  padding-bottom: 3px;
+}
+
+/* ── Postmark (About page) ────────────────────────────────────── */
+
+.postmark {
+  width: 165px;
+  height: 165px;
+  border: 2px dashed var(--pink);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(6deg);
+  float: right;                    /* sits beside the letter text */
+  margin: 0 0 18px 28px;
+  color: var(--faded);
+}
+.postmark .pm-city { font-size: 13px; letter-spacing: 2px; }
+.postmark .pm-date { font-size: 18px; font-weight: 400; margin: 4px 0; color: var(--ink); }
+.postmark .pm-note { font-size: 11px; letter-spacing: 1.5px; }
+
+/* ── The letter (About page) ──────────────────────────────────── */
+
+.letter {
+  max-width: 700px;
+  margin: 0 auto;   /* centers the letter within the page */
+}
+.letter p { margin-bottom: 1.2em; }
+.letter .salutation {
+  font-family: var(--display-font);
+  font-style: italic;
+  font-size: clamp(34px, 5vw, 46px);
+  line-height: 1.25;
+  margin-bottom: 0.6em;
+}
+.letter .intro {
+  font-family: var(--display-font);
+  font-size: clamp(28px, 3.8vw, 37px);
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+.letter .signoff { font-style: italic; margin-top: 1.8em; margin-bottom: 0.2em; }
+.letter .signature { font-family: var(--display-font); font-style: italic; font-size: 40px; }
+
+/* ── Enclosed photos (About page) ─────────────────────────────── */
+
+.snapshots {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 52px 0 16px;
+  flex-wrap: wrap;
+}
+.snapshot {
+  background: var(--card);
+  border: 0.5px solid var(--card-edge);
+  padding: 10px 10px 12px;
+  width: 330px;
+  box-shadow: none;
+}
+.snapshot img { width: 100%; display: block; }
+.snapshot figcaption {
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 9px;
+  color: var(--faded);
+}
+.snapshot.tilt-left { transform: rotate(-2deg); }
+.snapshot.tilt-right { transform: rotate(1.6deg); }
+
+/* ── Dotted divider ───────────────────────────────────────────── */
+
+.perforation {
+  border: none;
+  border-bottom: 1.5px dotted var(--line);
+  margin: 34px 0;
+}
+
+/* ── Section labels (small caps, postal style) ────────────────── */
+
+.label {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--faded);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.page-intro { font-family: var(--display-font); font-style: italic; font-size: clamp(27px, 3.4vw, 34px); margin-bottom: 8px; }
+
+/* ── Work page: enclosures ────────────────────────────────────── */
+
+.enclosure { position: relative; }
+.enclosure h2 { font-family: var(--display-font); font-weight: 600; font-size: 34px; font-weight: 600; margin-bottom: 2px; }
+.enclosure .meta {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--faded);
+  margin-bottom: 12px;
+}
+.enclosure .body { max-width: 560px; }
+
+/* Press clipping, pinned beside the Privapals entry */
+.clipping {
+  position: absolute;
+  top: 34px;
+  right: -10px;
+  width: 185px;
+  background: var(--card);
+  border: 0.5px solid var(--card-edge);
+  padding: 12px 14px;
+  transform: rotate(2.5deg);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.clipping .press-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #b98a8b;
+  margin-bottom: 5px;
+}
+.clipping a { font-size: 13.5px; color: var(--faded); }
+
+/* ── Play page: mixtape ───────────────────────────────────────── */
+
+.mixtape-list { list-style: none; }
+.mixtape-list li { margin-bottom: 26px; }
+.mixtape-list .side {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--faded);
+  margin-bottom: 6px;
+}
+.mixtape-list .fav {
+  font-size: 15.5px;
+  font-style: italic;
+  color: var(--faded);
+  margin: 6px 0 10px;
+}
+.mixtape-list iframe { border-radius: 8px; border: none; }
+
+.notecard {
+  background: var(--card);
+  border: 0.5px solid var(--card-edge);
+  padding: 16px 20px;
+  max-width: 400px;
+  transform: rotate(-1.2deg);
+  margin: 34px 0 6px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.notecard .nc-link { display: inline-block; margin-top: 8px; font-size: 15.5px; }
+
+/* ── Play page: postcards ─────────────────────────────────────── */
+
+.postcards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.postcard {
+  background: var(--card);
+  border: 0.5px solid var(--card-edge);
+  padding: 16px 18px 18px;
+  position: relative;
+}
+.postcard:nth-child(odd) { transform: rotate(-1deg); }
+.postcard:nth-child(even) { transform: rotate(0.9deg); }
+
+.postcard .stamp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 32px;
+  background: var(--pink);
+  border: 1.5px dashed var(--card);
+  outline: 1px solid #e5b3b5;
+}
+.postcard h2 { font-family: var(--display-font); font-weight: 600; font-size: 27px; font-weight: 600; margin-bottom: 1px; padding-right: 36px; }
+.postcard .tagline {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--faded);
+  margin-bottom: 10px;
+}
+.postcard .pc-message { font-size: 15.5px; line-height: 1.65; margin-bottom: 12px; }
+.postcard .pc-spots-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--faded);
+  margin-bottom: 3px;
+}
+.postcard ul { list-style: none; font-size: 16.5px; }
+.postcard li { padding: 2.5px 0; }
+.postcard li::before { content: "· "; color: var(--faded); }
+
+/* ── Footer: return address ───────────────────────────────────── */
+
+footer {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1.5px dotted var(--line);
+  font-size: 16px;
+  color: var(--faded);
+}
+footer .contact-links { margin-top: 6px; display: flex; gap: 22px; flex-wrap: wrap; }
+footer .contact-links a { color: var(--ink); font-size: 16px; }
+footer .hosted-note { margin-top: 18px; font-size: 13.5px; letter-spacing: 0.5px; }
+footer .hosted-note a { color: var(--faded); }
+
+/* ═══════════════════════════════════════════════════════════════
+   ENVELOPE OPENING (first visit to the About page)
+   The overlay covers the page; clicking the envelope opens it.
+   Delete this whole section + the #envelope-overlay div in
+   index.html if you ever want to remove the animation.
+   ═══════════════════════════════════════════════════════════════ */
+
+#envelope-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  z-index: 10;
+  cursor: pointer;
+  transition: opacity 0.6s ease;
+}
+#envelope-overlay.opening { opacity: 0; pointer-events: none; }
+#envelope-overlay.hidden { display: none; }
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 190px;
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+}
+.envelope .flap {
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 100px solid #ffffff;
+  filter: drop-shadow(0 1.5px 0 var(--card-edge));
+  transform-origin: top center;
+  transition: transform 0.7s ease;
+  z-index: 2;
+}
+.envelope.open .flap { transform: rotateX(180deg); }
+
+/* pink heart sealing the flap shut; melts away as it opens */
+.envelope .heart-seal {
+  position: absolute;
+  top: 100px; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.envelope.open .heart-seal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.6);
+}
+.envelope .env-stamp {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 34px; height: 42px;
+  background: var(--pink);
+  border: 2px dashed var(--card);
+  outline: 1px solid #e5b3b5;
+  z-index: 3;
+}
+.envelope-hint {
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  color: var(--faded);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #envelope-overlay { display: none; }
+  .envelope .flap, #envelope-overlay, .envelope-icon { transition: none; }
+}
+
+/* ── Small screens (phones) ───────────────────────────────────── */
+
+@media (max-width: 700px) {
+  body { font-size: 19px; }
+  .page { padding: 32px 20px 64px; }
+
+  /* nav: name on top, links below */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+  .nav-links { gap: 20px; }
+  .nav-links a { font-size: 14px; }
+
+  /* postmark: smaller, centered */
+  .postmark { float: none; width: 130px; height: 130px; margin: 0 auto 32px; }
+  .postmark .pm-date { font-size: 16px; }
+
+  .letter .intro { font-size: 24px; }
+
+  /* snapshots stack */
+  .snapshots { flex-direction: column; align-items: center; gap: 26px; }
+  .snapshot { width: min(300px, 100%); }
+
+  /* work page */
+  .enclosure h2 { font-size: 23px; }
+  .enclosure .body { max-width: none; }
+  .clipping {
+    position: static;
+    transform: rotate(1.5deg);
+    width: auto;
+    max-width: 320px;
+    margin: 18px 0 6px;
+  }
+
+  /* play page */
+  .postcards { grid-template-columns: 1fr; }
+  .notecard { max-width: none; }
+
+  /* envelope fits small screens */
+  .envelope { width: min(300px, 84vw); height: 190px; }
+  .envelope .flap {
+    border-left-width: calc(min(300px, 84vw) / 2);
+    border-right-width: calc(min(300px, 84vw) / 2);
+  }
+
+  footer { margin-top: 56px; }
+}
